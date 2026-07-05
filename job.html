@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Role — Careers at Obsidian Capital</title>
+  <meta name="description" content="Role details and application — Obsidian Capital careers." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 12 22 30H10L4 12Z' fill='none' stroke='%23c9a962' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="page-fade">
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Obsidian Capital home">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 2 36 14 29 38H11L4 14Z" stroke="#c9a962" stroke-width="1.4"/>
+          <path d="M20 2 20 38M4 14l16 8 16-8M11 38l9-16 9 16" stroke="#c9a962" stroke-width="0.7" opacity="0.55"/>
+        </svg>
+        <span class="brand-name">Obsidian<span>&nbsp;Capital</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="careers.html" aria-current="page">Open Roles</a></li>
+          <li><a href="culture.html">Life at Obsidian</a></li>
+          <li class="nav-cta"><a href="#apply" class="btn btn-sm">Apply</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== JOB HERO (filled by job.js) ===================== -->
+    <section class="job-hero">
+      <div class="container job-hero-inner" id="jobHero"></div>
+    </section>
+
+    <!-- ===================== DETAIL ===================== -->
+    <section class="section" id="jobDetailSection" style="padding-top: clamp(3rem, 6vw, 5rem);">
+      <div class="container job-detail-layout">
+        <div class="job-body" id="jobBody"></div>
+        <dl class="job-aside" id="jobAside"></dl>
+      </div>
+    </section>
+
+    <!-- ===================== APPLY ===================== -->
+    <section class="section apply-section" id="apply">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Application</span>
+          <h2 class="display-md reveal reveal-delay-1">Make your <em class="serif-italic">move.</em></h2>
+          <p class="lede reveal reveal-delay-2">
+            We read every application personally. No screening robots — a human at
+            Obsidian will see what you send.
+          </p>
+        </div>
+
+        <form class="apply-form reveal" id="applyForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="linkedin">LinkedIn / portfolio <span style="color:var(--text-mute); text-transform:none; letter-spacing:0.05em;">(optional)</span></label>
+              <input type="url" id="linkedin" name="linkedin" placeholder="https://…" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="field file-field">
+            <label for="cv">Résumé / CV <span class="req">*</span></label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" />
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="cover">Why Obsidian? <span class="req">*</span></label>
+            <textarea id="cover" name="cover" placeholder="A few sentences is plenty. Substance over length."></textarea>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-solid btn-arrow">Submit Application</button>
+          </div>
+        </form>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <div class="success-ring">✓</div>
+          <h3>Application received.</h3>
+          <p id="successMsg">
+            Thank you. Our talent team will review your application and respond
+            within ten business days. Watch your inbox.
+          </p>
+          <a class="link-gold" href="careers.html">Browse more roles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SIMILAR ROLES ===================== -->
+    <section class="section" id="similarSection">
+      <div class="container">
+        <div class="section-head" style="display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; max-width:none;">
+          <div style="display:grid; gap:1.2rem;">
+            <span class="eyebrow reveal">Keep looking</span>
+            <h2 class="display-md reveal reveal-delay-1">Similar roles</h2>
+          </div>
+          <a class="link-gold reveal reveal-delay-2" href="careers.html">View all roles</a>
+        </div>
+        <div class="job-list" id="similarJobs"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M20 2 36 14 29 38H11L4 14Z" stroke="#c9a962" stroke-width="1.4"/>
+              <path d="M20 2 20 38M4 14l16 8 16-8M11 38l9-16 9 16" stroke="#c9a962" stroke-width="0.7" opacity="0.55"/>
+            </svg>
+            <span class="brand-name">Obsidian<span>&nbsp;Capital</span></span>
+          </a>
+          <p>
+            A global investment bank trusted with $2.4 trillion of the world's capital.
+            Headquartered in New York since 1876.
+          </p>
+        </div>
+        <div>
+          <h4>Careers</h4>
+          <ul>
+            <li><a href="careers.html">Open Roles</a></li>
+            <li><a href="culture.html">Life at Obsidian</a></li>
+            <li><a href="culture.html#process">Hiring Process</a></li>
+            <li><a href="careers.html?dept=Internships">Internships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="careers.html?dept=Engineering">Engineering</a></li>
+            <li><a href="careers.html?dept=Quantitative">Quantitative</a></li>
+            <li><a href="careers.html?dept=Trading%20%26%20Markets">Trading &amp; Markets</a></li>
+            <li><a href="careers.html?dept=Facilities%20%26%20Services">Facilities &amp; Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Offices</h4>
+          <ul>
+            <li><a href="culture.html#offices">New York — HQ</a></li>
+            <li><a href="culture.html#offices">London</a></li>
+            <li><a href="culture.html#offices">Singapore</a></li>
+            <li><a href="culture.html#offices">Zurich</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Obsidian Capital. A fictional institution, impeccably run.</span>
+        <span>Equal opportunity, by conviction.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jobs-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/job.js"></script>
+</body>
+</html>

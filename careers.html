@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Roles — Careers at Obsidian Capital</title>
+  <meta name="description" content="Browse all open roles at Obsidian Capital — engineering, quantitative, markets, corporate, internships, and facilities positions across our global offices." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 12 22 30H10L4 12Z' fill='none' stroke='%23c9a962' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="page-fade">
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Obsidian Capital home">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 2 36 14 29 38H11L4 14Z" stroke="#c9a962" stroke-width="1.4"/>
+          <path d="M20 2 20 38M4 14l16 8 16-8M11 38l9-16 9 16" stroke="#c9a962" stroke-width="0.7" opacity="0.55"/>
+        </svg>
+        <span class="brand-name">Obsidian<span>&nbsp;Capital</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="careers.html" aria-current="page">Open Roles</a></li>
+          <li><a href="culture.html">Life at Obsidian</a></li>
+          <li class="nav-cta"><a href="#openRoles" class="btn btn-sm">Join Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container">
+        <span class="eyebrow reveal visible">Open roles</span>
+        <h1 class="display-lg reveal visible reveal-delay-1">
+          Find your place<br />at the <em class="serif-italic">table.</em>
+        </h1>
+        <p class="lede reveal visible reveal-delay-2">
+          Every role below is open right now. Search, filter, and find the one
+          that was written for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== BOARD ===================== -->
+    <section class="section" id="openRoles" style="padding-top: clamp(2.5rem, 6vw, 4rem);">
+      <div class="container">
+        <div class="filters reveal visible">
+          <div class="search-wrap">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="9" cy="9" r="6.5"/><path d="m14 14 4.5 4.5"/>
+            </svg>
+            <input type="search" class="search-input" id="searchInput"
+                   placeholder="Search roles — try “engineer”, “intern”, “cleaning”…"
+                   aria-label="Search roles" />
+          </div>
+          <div class="filter-row">
+            <select class="filter-select" id="deptFilter" aria-label="Filter by department">
+              <option value="">All departments</option>
+            </select>
+            <select class="filter-select" id="locFilter" aria-label="Filter by location">
+              <option value="">All locations</option>
+            </select>
+            <select class="filter-select" id="typeFilter" aria-label="Filter by job type">
+              <option value="">All types</option>
+            </select>
+            <select class="filter-select" id="seniorityFilter" aria-label="Filter by seniority">
+              <option value="">All levels</option>
+            </select>
+          </div>
+          <div class="filters-bar">
+            <p class="result-count" id="resultCount" aria-live="polite"></p>
+            <button class="clear-filters" id="clearFilters" type="button">Clear all filters</button>
+          </div>
+        </div>
+
+        <div class="job-list" id="jobList"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="eyebrow" style="justify-content:center;">No matches</span>
+          <h3>Nothing fits that search — yet.</h3>
+          <p>Try broadening your filters, or clear them to see all open roles.</p>
+          <button class="btn btn-sm" type="button" onclick="document.getElementById('clearFilters').click()">Show All Roles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow reveal" style="justify-content:center;">Nothing quite right?</span>
+        <h2 class="display-md reveal reveal-delay-1">Exceptional people don't<br />always fit a <em class="serif-italic">listing.</em></h2>
+        <p class="lede reveal reveal-delay-2">
+          If you believe you belong at Obsidian and no role above says so, write to
+          <a href="mailto:talent@obsidiancapital.example" class="gold">talent@obsidiancapital.example</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M20 2 36 14 29 38H11L4 14Z" stroke="#c9a962" stroke-width="1.4"/>
+              <path d="M20 2 20 38M4 14l16 8 16-8M11 38l9-16 9 16" stroke="#c9a962" stroke-width="0.7" opacity="0.55"/>
+            </svg>
+            <span class="brand-name">Obsidian<span>&nbsp;Capital</span></span>
+          </a>
+          <p>
+            A global investment bank trusted with $2.4 trillion of the world's capital.
+            Headquartered in New York since 1876.
+          </p>
+        </div>
+        <div>
+          <h4>Careers</h4>
+          <ul>
+            <li><a href="careers.html">Open Roles</a></li>
+            <li><a href="culture.html">Life at Obsidian</a></li>
+            <li><a href="culture.html#process">Hiring Process</a></li>
+            <li><a href="careers.html?dept=Internships">Internships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="careers.html?dept=Engineering">Engineering</a></li>
+            <li><a href="careers.html?dept=Quantitative">Quantitative</a></li>
+            <li><a href="careers.html?dept=Trading%20%26%20Markets">Trading &amp; Markets</a></li>
+            <li><a href="careers.html?dept=Facilities%20%26%20Services">Facilities &amp; Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Offices</h4>
+          <ul>
+            <li><a href="culture.html#offices">New York — HQ</a></li>
+            <li><a href="culture.html#offices">London</a></li>
+            <li><a href="culture.html#offices">Singapore</a></li>
+            <li><a href="culture.html#offices">Zurich</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Obsidian Capital. A fictional institution, impeccably run.</span>
+        <span>Equal opportunity, by conviction.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jobs-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/careers.js"></script>
+</body>
+</html>
